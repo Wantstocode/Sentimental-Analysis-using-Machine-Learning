@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movie Review</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .login h1{
+            background-color: #151515;
+            color: #fff;
+
+
+            text-align: center;
+            padding: 1em;
+
+        }
+
+        img{
+            height: 10%;
+
+
+        }
+        button{
+            border: solid black 2px;
+            border-radius: 8px;
+            width: 500px;
+        }
+
+        b{
+            text-align: center;
+            text-transform: capitalize;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            size: 50px;
+        }
+        body{
+
+            background-image:url("https://preview.redd.it/how-can-someone-make-this-background-with-html-and-css-i-v0-zjgs096khv591.jpg?auto=webp&s=9659527da9196c27a8875200b41d20a8e901c341");
+        }
+        input{
+            width: 500px;
+        }
+    </style>
+</head>
+  <body>
+    <center>
+    <div class = "login">
+        <h1>Sentimental Analysis for Movie Review</h1>
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTznA1Yk_i0ObmevYkk-Glkdu59jaXDUJoRSw5G3pe8q6ZqG0pG" alt="movie pic" style=""  >
+        <h2 style="color:white" >How was the movie</h2>
+            <form action="{{url_for('predict')}}" method="post">
+                <input type="text" name="review" placeholder="review here...." required = "required" width="50px">
+                <br>
+                <button type="submit" class="btn btn-primary btn-block btn-large" style="width: 15%;">Submit</button>
+            </form>
+            <br>
+
+            <b>{{prediction_text}}</b>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</center>
+</body>
+</html>
